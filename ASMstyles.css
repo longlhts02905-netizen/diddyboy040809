@@ -22,7 +22,7 @@ body {
 /* ================= HEADER ================= */
 header {
   background: #131921;
-  color: #fff;
+  color: #f0b802;
 }
 
 .header-top {
@@ -65,10 +65,47 @@ header {
 
 .nav {
   background: #232f3e;
-  padding: 8px 16px;
+  padding: 5px 16px;
   display: flex;
   gap: 20px;
   font-size: 14px;
+}
+.menu a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 6px;
+
+    background-color: #febd69;   /* màu nền */
+    color: #000000;              /* màu chữ */
+    text-decoration: none;
+
+    border-radius: 8px;          /* 👈 bo góc */
+    transition: 0.3s;            /* mượt */
+}
+
+/* hover */
+.menu a:hover {
+    background-color: #ffffff;   /* xanh khi rê chuột */
+}
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+}
+
+.menu li {
+    padding: 8px 16px;
+    background-color: #111827;
+    color: rgb(245, 180, 2);
+
+    border-radius: 10px;   /* 👈 bo góc */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    background-color: #22c55e; /* xanh lá */
 }
 
 /* ================= MAIN ================= */
@@ -99,7 +136,7 @@ header {
 
 .hero button {
   background: #111827;
-  color: #fff;
+  color: #eeb007;
   border: none;
   padding: 10px 22px;
   border-radius: 20px;
@@ -256,16 +293,90 @@ td {
   transform: translateY(-6px);
 
 }
-.video-fixed{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 480px;
-  z-index: 9999;
+.fb-video-box {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 9 / 16;
+
+    background: black;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.video-fixed video{
-  width: 100%;
+.fb-video-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: auto;
+}
+.fb-video-box {
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    transition: transform .3s;
+}
+
+.fb-video-box:hover {
+    transform: translateY(-6px);
+}
+.auth-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 26px;
+  margin: 40px auto;
+  max-width: 420px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.auth-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  color: #febd69;
+}
+
+.cart {
+  color: #fff;
+  font-weight: 600;
+}
+.auth-page {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  text-align: center;
+}
+
+.auth-page input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+}
+
+.auth-page button {
+  width: 100%;
+  padding: 12px;
+  background: #111827;
+  color: #febd69;
+  border: none;
+  border-radius: 8px;
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
 }
